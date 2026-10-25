@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Filter, Search, SlidersHorizontal, BookOpen, X, RefreshCw } from 'lucide-react';
 import { store } from '@/lib/data/store';
 import BookCard from '@/components/books/BookCard';
 
-export default function BooksPage() {
+function BooksContent() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get('category') || '';
   const initialSearch = searchParams.get('search') || '';
@@ -342,5 +342,19 @@ export default function BooksPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function BooksPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="max-w-7xl mx-auto px-4 py-16 text-center text-xs text-gray-500 font-nastaliq">
+          کتب کی فہرست لوڈ کی جا رہی ہے...
+        </div>
+      }
+    >
+      <BooksContent />
+    </Suspense>
   );
 }
