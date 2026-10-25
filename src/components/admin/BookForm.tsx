@@ -237,7 +237,7 @@ export default function BookForm({ initialBook }: BookFormProps) {
       <div className="flex flex-wrap items-center justify-between gap-4 border-b pb-4">
         <div>
           <h2 className="font-nastaliq text-2xl font-bold text-brand-navy-950">
-            {isEditing ? `کتاب میں ترمیم: ${initialBook.title_ur}` : 'نئی کتاب کا اندراج (Add Book)'}
+            {initialBook ? `کتاب میں ترمیم: ${initialBook.title_ur}` : 'نئی کتاب کا اندراج (Add Book)'}
           </h2>
           <p className="text-xs text-gray-500 mt-1">
             کتاب کی بنیادی معلومات، ناشرین، قیمتیں اور اسٹاک ایڈیشنز درج فرمائیں
