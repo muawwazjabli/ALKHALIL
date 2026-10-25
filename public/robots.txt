@@ -1,0 +1,8 @@
+# Robots.txt for Al Khalil Publishers (الخلیل پبلشرز)
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/*
+
+Sitemap: https://alkhalilpublishers.com/sitemap.xml
