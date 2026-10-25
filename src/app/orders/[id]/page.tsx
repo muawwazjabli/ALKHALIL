@@ -236,8 +236,8 @@ ${itemsListText}
         {/* Invoice Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 border-b-2 border-brand-gold/30 pb-6">
           <div className="flex items-center space-x-4 space-x-reverse">
-            <div className="relative w-16 h-16 bg-brand-navy-950 rounded-full p-2 border border-brand-gold flex items-center justify-center">
-              <Image src="/logo.png" alt="الخلیل پبلشرز" width={48} height={48} className="object-contain" />
+            <div className="relative w-20 h-20 bg-white rounded-2xl p-1.5 border-2 border-brand-gold shadow-md flex items-center justify-center shrink-0 ring-2 ring-brand-gold/20">
+              <Image src="/logo.png" alt="الخلیل پبلشرز" width={72} height={72} className="w-full h-full object-contain" />
             </div>
             <div>
               <h1 className="font-nastaliq text-3xl font-bold text-brand-navy-950">الخلیل پبلشرز</h1>

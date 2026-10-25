@@ -63,18 +63,18 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3 space-x-reverse">
-              <div className="w-12 h-12 bg-white/10 rounded-full p-1 border border-brand-gold/50 flex items-center justify-center">
+              <div className="w-16 h-16 bg-white rounded-2xl p-1.5 border-2 border-brand-gold shadow-lg flex items-center justify-center shrink-0 ring-2 ring-brand-gold/30">
                 <Image
                   src="/logo.png"
                   alt="الخلیل پبلشرز"
-                  width={40}
-                  height={40}
-                  className="object-contain"
+                  width={60}
+                  height={60}
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>
-                <h3 className="font-nastaliq text-2xl font-bold text-brand-gold-300">الخلیل پبلشرز</h3>
-                <span className="text-[11px] text-gray-400 uppercase font-sans tracking-widest">
+                <h3 className="font-nastaliq text-2xl md:text-3xl font-bold text-brand-gold-300">الخلیل پبلشرز</h3>
+                <span className="text-[11px] md:text-xs text-gray-300 uppercase font-sans tracking-widest block font-medium">
                   Al Khalil Publishers
                 </span>
               </div>

@@ -44,14 +44,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           {/* Admin Header */}
           <div className="p-5 border-b border-brand-navy-800 flex items-center justify-between">
             <Link href="/admin" className="flex items-center space-x-3 space-x-reverse">
-              <div className="w-9 h-9 bg-brand-gold/20 rounded-lg p-1 border border-brand-gold flex items-center justify-center">
-                <Image src="/logo.png" alt="الخلیل" width={28} height={28} className="object-contain" />
+              <div className="w-12 h-12 bg-white rounded-xl p-1.5 border-2 border-brand-gold shadow-md flex items-center justify-center shrink-0 ring-2 ring-brand-gold/20">
+                <Image src="/logo.png" alt="الخلیل ایڈمن" width={42} height={42} className="w-full h-full object-contain" />
               </div>
               <div>
-                <span className="font-nastaliq text-lg font-bold text-brand-gold-300 block leading-tight">
+                <span className="font-nastaliq text-xl font-bold text-brand-gold-300 block leading-tight">
                   الخلیل ایڈمن
                 </span>
-                <span className="text-[10px] text-gray-400 font-sans uppercase">
+                <span className="text-[10px] text-gray-300 font-sans uppercase tracking-wider">
                   Management Portal
                 </span>
               </div>

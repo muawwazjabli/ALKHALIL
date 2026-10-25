@@ -112,21 +112,21 @@ export default function Header() {
         <div className="flex items-center justify-between gap-4">
           {/* Logo & Brand Identity */}
           <Link href="/" className="flex items-center space-x-3 space-x-reverse group shrink-0">
-            <div className="relative w-12 h-12 bg-white/10 rounded-full p-1 border border-brand-gold/50 flex items-center justify-center overflow-hidden">
+            <div className="relative w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl p-1.5 border-2 border-brand-gold shadow-lg flex items-center justify-center shrink-0 transition-transform group-hover:scale-105 ring-2 ring-brand-gold/30">
               <Image
                 src="/logo.png"
                 alt="الخلیل پبلشرز لوگو"
-                width={44}
-                height={44}
-                className="object-contain"
+                width={64}
+                height={64}
+                className="w-full h-full object-contain"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-nastaliq text-2xl font-bold text-brand-gold-300 group-hover:text-brand-gold-200 transition-colors tracking-wide leading-tight">
+              <span className="font-nastaliq text-2xl md:text-3xl font-bold text-brand-gold-300 group-hover:text-brand-gold-200 transition-colors tracking-wide leading-tight drop-shadow-sm">
                 الخلیل پبلشرز
               </span>
-              <span className="text-[11px] text-gray-300 tracking-wider uppercase font-sans">
+              <span className="text-[11px] md:text-xs text-brand-gold-100/90 tracking-widest uppercase font-sans font-medium">
                 Al Khalil Publishers
               </span>
             </div>
