@@ -48,16 +48,45 @@ class BookstoreStore {
     if (!this.isClient()) return;
     try {
       const savedBooks = localStorage.getItem('ak_books');
-      if (savedBooks) this.books = JSON.parse(savedBooks);
+      if (savedBooks) {
+        const parsed = JSON.parse(savedBooks);
+        if (Array.isArray(parsed) && parsed.length >= this.books.length) {
+          this.books = parsed;
+        } else {
+          // Upgrade localStorage with the full initial catalog
+          localStorage.setItem('ak_books', JSON.stringify(this.books));
+        }
+      }
 
       const savedCats = localStorage.getItem('ak_categories');
-      if (savedCats) this.categories = JSON.parse(savedCats);
+      if (savedCats) {
+        const parsed = JSON.parse(savedCats);
+        if (Array.isArray(parsed) && parsed.length >= this.categories.length) {
+          this.categories = parsed;
+        } else {
+          localStorage.setItem('ak_categories', JSON.stringify(this.categories));
+        }
+      }
 
       const savedPubs = localStorage.getItem('ak_publishers');
-      if (savedPubs) this.publishers = JSON.parse(savedPubs);
+      if (savedPubs) {
+        const parsed = JSON.parse(savedPubs);
+        if (Array.isArray(parsed) && parsed.length >= this.publishers.length) {
+          this.publishers = parsed;
+        } else {
+          localStorage.setItem('ak_publishers', JSON.stringify(this.publishers));
+        }
+      }
 
       const savedAuthors = localStorage.getItem('ak_authors');
-      if (savedAuthors) this.authors = JSON.parse(savedAuthors);
+      if (savedAuthors) {
+        const parsed = JSON.parse(savedAuthors);
+        if (Array.isArray(parsed) && parsed.length >= this.authors.length) {
+          this.authors = parsed;
+        } else {
+          localStorage.setItem('ak_authors', JSON.stringify(this.authors));
+        }
+      }
 
       const savedOrders = localStorage.getItem('ak_orders');
       if (savedOrders) this.orders = JSON.parse(savedOrders);
